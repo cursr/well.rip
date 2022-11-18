@@ -13,7 +13,7 @@ $(document).ready(() => {
       link: '996694801913225306',
     },
     {
-      name: 'Developer: Covid',
+      name: 'Web Developer: Covid',
       link: '1037677349237424128',
     },
   ];
@@ -111,7 +111,7 @@ const writeLine = (text, speed, timeout, callback) => {
 };
 
 $.getJSON(ipgeolocation, (data) => {
-  writeLine(['Logging in...', "Welc to <span style='font-size: 14px; color: #06d;'>[well.rip]</span>..."], 30, () => {
+  writeLine(['Loading...', "Welcome to <span style='font-size: 14px; color: #06d;'>[well.rip]</span>..."], 30, () => {
     if (app.skippedIntro) return;
 
     clearCursor();
@@ -121,7 +121,7 @@ $.getJSON(ipgeolocation, (data) => {
     const ip = data.ip ? data.ip : usernames[Math.floor(Math.random() * usernames.length)];
     const country = data.country_name ? data.country_name : 'your country';
 
-    writeLine([`Successful. <span style='font-size: 14px; color: #0f0;'>[logged in]</span>`, `Welcome back, This website will be available in: ${country} soon!`], 30, 500, () => {
+    writeLine([`Successful. <span style='font-size: 14px; color: #0f0;'>[logged in]</span>`, `Welcome, This website will be available soon!`], 30, 500, () => {
       if (app.skippedIntro) return;
 
       clearCursor();
