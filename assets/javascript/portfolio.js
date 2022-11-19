@@ -121,7 +121,7 @@ $.getJSON(ipgeolocation, (data) => {
     const ip = data.ip ? data.ip : usernames[Math.floor(Math.random() * usernames.length)];
     const country = data.country_name ? data.country_name : 'your country';
 
-    writeLine([`Successful. <span style='font-size: 14px; color: #0f0;'>[logged in]</span>`, `Welcome, This website will be available soon!`], 30, 500, () => {
+    writeLine([`This website will be available soon!`], 30, 500, () => {
       if (app.skippedIntro) return;
 
       clearCursor();
